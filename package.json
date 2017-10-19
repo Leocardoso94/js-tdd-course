@@ -1,0 +1,24 @@
+{
+  "name": "js-tdd-course",
+  "version": "1.0.0",
+  "description": "Biblioteca do curso de JS com TDD na prática",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leocardoso94/js-tdd-course.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Leonardo Cardoso <leocardosoti@gmail.com> (https://leocardoso94.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leocardoso94/js-tdd-course/issues"
+  },
+  "homepage": "https://github.com/Leocardoso94/js-tdd-course#readme"
+}
