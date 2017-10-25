@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint src/*.js",
     "test": "mocha tests/**/*.spec.js --require babel-register",
-    "test:tdd": "mocha tests/**/*.spec.js --watch --require babel-register",
+    "tdd": "mocha tests/**/*.spec.js --watch --require babel-register",
     "prepush": "npm run lint"
   },
   "repository": {

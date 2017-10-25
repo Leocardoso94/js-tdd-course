@@ -1,61 +1,22 @@
 /* global define, it, describe */
 
 import { expect } from 'chai';
-import { sum, sub, div, mult } from './../src/main';
+import FizzBuzz from './../src/main';
 
 
-describe('Calc', () => {
-
-  describe('Smoke tests', () => {
-    it('should exist the method `sum`', () => {
-      expect(sum).to.exist;
-      expect(sum).to.be.an('function');
-    });
-    it('should exist the method `sub`', () => {
-      expect(sub).to.exist;
-      expect(sub).to.be.an('function');
-    });
-    it('should exist the method `mult`', () => {
-      expect(mult).to.exist;
-      expect(mult).to.be.an('function');
-    });
-    it('should exist the method `div`', () => {
-      expect(div).to.exist;
-      expect(div).to.be.an('function');
-    });
+describe('Main', () => {
+  it('should return Fizz if the number is multiple of 3', () => {
+    expect(FizzBuzz(3)).to.be.equal('Fizz');
+    expect(FizzBuzz(6)).to.be.equal('Fizz');
   });
-
-  describe('Sum', () => {
-    it('should return 4 when sum `2+2`', () => {
-      expect(sum(2, 2)).to.be.equal(4);
-    });
+  it('should return Buzz if the number is multiple of 5', () => {
+    expect(FizzBuzz(5)).to.be.equal('Buzz');
   });
-
-  describe('sub', () => {
-
-    it('should return 0 when sub `2-2`', () => {
-      expect(sub(2, 2)).to.be.equal(0);
-    });
-
-    it('should return -6 when sub `0-6`', () => {
-      expect(sub(0, 6)).to.be.equal(-6);
-    });
+  it('should return FizzBuzz if the number is multiple of 5 and 3', () => {
+    expect(FizzBuzz(15)).to.be.equal('FizzBuzz');
   });
-
-  describe('div', () => {
-
-    it('should return 1 when div `2/2`', () => {
-      expect(div(2, 2)).to.be.equal(1);
-    });
-
-    it('should return "Não é possível divisão por zero" when divide by zero', () => {
-      expect(div(4, 0)).to.be.equal('Não é possível divisão por zero');
-    });
-  });
-
-  describe('mult', () => {
-    it('should return 4 when mult `2*2`', () => {
-      expect(mult(2, 2)).to.be.equal(4);
-    });
+  it('should return the number if the number is not multiple of 3 and 5', () => {
+    expect(FizzBuzz(14)).to.be.equal(14);
+    expect(FizzBuzz(16)).to.be.equal(16);
   });
 });
